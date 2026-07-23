@@ -4,32 +4,151 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>عيسى الأسطورة | الموقع الشخصي</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        header.hero {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #00d2ff;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 25px;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+        }
+        .card h2 {
+            color: #203a43;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            border-right: 4px solid #00d2ff;
+            padding-right: 10px;
+        }
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style: none;
+            margin-top: 10px;
+        }
+        .skills-list li {
+            background: #e1f5fe;
+            color: #0288d1;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.95rem;
+        }
+        .contact-btns {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            transition: background 0.3s;
+        }
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: white;
+        }
+        .btn-whatsapp:hover {
+            background-color: #1ebe5d;
+        }
+        .btn-email {
+            background-color: #0077b5;
+            color: white;
+        }
+        .btn-email:hover {
+            background-color: #005f93;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9rem;
+            background: #e4e6eb;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- الجزء الخاص بالزائر -->
+    <!-- الواجهة الرئيسية -->
     <header class="hero">
-        <h1 id="view-name">عيسى الأسطورة</h1>
-        <p class="subtitle" id="view-job">صيانة الأجهزة الكهربائية</p>
+        <h1>عيسى الأسطورة</h1>
+        <p>خبير صيانة الإلكترونيات والأجهزة الكهربائية</p>
     </header>
 
     <main class="container">
-        <!-- قسم نبذة عني -->
+        <!-- نبذة عني -->
         <section class="card">
             <h2>عنّي</h2>
-            <p id="view-about">أعشق الإلكترونيات والتكنولوجيا</p>
+            <p>أعشق الإلكترونيات والتكنولوجيا، ولدي شغف كبير في حل المشكلات التقنية وصيانة الأجهزة بكفاءة عالية واحترافية لتلبية احتياجات العملاء بدقة.</p>
         </section>
 
-        <!-- قسم التواصل -->
+        <!-- قسم الخبرات والمهارات -->
+        <section class="card">
+            <h2>خبراتي ومهاراتي</h2>
+            <p>أمتلك مهارات عملية متنوعة في عدة مجالات تقنية ومهنية، أبرزها:</p>
+            <ul class="skills-list">
+                <li>صيانة الأجهزة الكهربائية</li>
+                <li>إصلاح الإلكترونيات</li>
+                <li>التكنولوجيا والبرمجة</li>
+                <li>حل الأعطال التقنية</li>
+            </ul>
+        </section>
+
+        <!-- قسم تواصل معي -->
         <section class="card">
             <h2>تواصل معي</h2>
-            <p>البريد الإلكتروني: <a href="mailto:esamostfa495@gmail.com" id="view-email">esamostfa495@gmail.com</a></p>
+            <p>يسعدني تواصلك معي لأي استفسار أو خدمة:</p>
+            <div class="contact-btns">
+                <a href="https://wa.me/" class="btn btn-whatsapp" target="_blank">راسلني عبر واتساب</a>
+                <a href="mailto:esamostfa495@gmail.com" class="btn btn-email">راسلني عبر البريد</a>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>جميع الحقوق محفوظة &copy; عيسى الأسطورة</p>
+        <p>جميع الحقوق محفوظة &copy; عيسى الأسطورة 2026</p>
     </footer>
 
 </body>
