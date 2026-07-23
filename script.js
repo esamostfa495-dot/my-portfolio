@@ -1,64 +1,67 @@
-const toggleBtn = document.getElementById('toggle-btn');
-const editForm = document.getElementById('edit-form');
-const passwordModal = document.getElementById('password-modal');
-const confirmPassBtn = document.getElementById('confirm-pass-btn');
-const closeModalBtn = document.getElementById('close-modal-btn');
-const passInput = document.getElementById('modal-password-input');
-const errorMsg = document.getElementById('error-msg');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-// 🔒 كلمة السر الخاصة بك
-const MY_PASSWORD = "1432008esA@"; 
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
 
-// تحميل البيانات عند فتح الموقع
-window.onload = function() {
-    if(localStorage.getItem('siteName')) {
-        document.getElementById('view-name').textContent = localStorage.getItem('siteName');
-        document.getElementById('view-job').textContent = localStorage.getItem('siteJob');
-        document.getElementById('view-about').textContent = localStorage.getItem('siteAbout');
-        document.getElementById('view-skills').textContent = localStorage.getItem('siteSkills');
-        document.getElementById('view-email').href = "mailto:" + localStorage.getItem('siteEmail');
-    }
-};
+.hero {
+    text-align: center;
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    padding: 40px 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
 
-// فتح النافذة المنبثقة
-toggleBtn.addEventListener('click', () => {
-    passwordModal.classList.remove('hidden');
-    passInput.value = '';
-    errorMsg.classList.add('hidden');
-    passInput.focus();
-});
+.hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 8px;
+}
 
-// إغلاق النافذة
-closeModalBtn.addEventListener('click', () => {
-    passwordModal.classList.add('hidden');
-});
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
 
-// التحقق من كلمة السر
-confirmPassBtn.addEventListener('click', () => {
-    if (passInput.value === MY_PASSWORD) {
-        passwordModal.classList.add('hidden');
-        editForm.classList.remove('hidden');
-        toggleBtn.classList.add('hidden'); // إخفاء زر الفتح بعد الدخول
-    } else {
-        errorMsg.classList.remove('hidden');
-    }
-});
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
 
-// حفظ البيانات
-editForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+.card {
+    background: white;
+    padding: 20px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
 
-    const name = document.getElementById('input-name').value;
-    const job = document.getElementById('input-job').value;
-    const about = document.getElementById('input-about').value;
-    const skills = document.getElementById('input-skills').value;
-    const email = document.getElementById('input-email').value;
+.card h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+    display: inline-block;
+    padding-bottom: 4px;
+}
 
-    if(name) localStorage.setItem('siteName', name);
-    if(job) localStorage.setItem('siteJob', job);
-    if(about) localStorage.setItem('siteAbout', about);
-    if(skills) localStorage.setItem('siteSkills', skills);
-    if(email) localStorage.setItem('siteEmail', email);
+.card a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-    location.reload();
-});
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #777;
+    font-size: 0.9rem;
+}
+    
