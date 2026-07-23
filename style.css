@@ -1,0 +1,118 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: system-ui, -apple-system, sans-serif; 
+}
+
+body { 
+    background-color: #0f172a; 
+    color: #f8fafc; 
+    padding: 20px; 
+    max-width: 600px; 
+    margin: 0 auto; 
+    line-height: 1.6; 
+}
+
+.hero { text-align: center; padding: 20px 0; }
+.hero h1 { color: #38bdf8; font-size: 1.8rem; }
+.subtitle { color: #94a3b8; }
+
+.card { 
+    background-color: #1e293b; 
+    border-radius: 10px; 
+    padding: 20px; 
+    margin-top: 15px; 
+    border: 1px solid #334155; 
+}
+
+.card h2 { color: #38bdf8; margin-bottom: 8px; font-size: 1.2rem; }
+
+.btn { 
+    display: inline-block; 
+    background: #0284c7; 
+    color: white; 
+    text-decoration: none; 
+    padding: 8px 16px; 
+    border-radius: 6px; 
+    margin-top: 5px; 
+}
+
+.separator { margin: 40px 0 20px; border: 0; border-top: 1px dashed #334155; }
+
+/* لوحة التعديل */
+.admin-panel { 
+    background: #1e293b; 
+    padding: 15px; 
+    border-radius: 10px; 
+    border: 1px solid #0284c7; 
+}
+
+.edit-btn { 
+    background: #0284c7; 
+    color: white; 
+    border: none; 
+    padding: 10px; 
+    width: 100%; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    font-weight: bold; 
+}
+
+.hidden { display: none !important; }
+
+form { margin-top: 15px; display: flex; flex-direction: column; gap: 10px; }
+label { font-size: 0.85rem; color: #94a3b8; }
+input, textarea { 
+    background: #0f172a; 
+    border: 1px solid #334155; 
+    color: white; 
+    padding: 10px; 
+    border-radius: 6px; 
+    outline: none;
+}
+input:focus, textarea:focus { border-color: #38bdf8; }
+
+.save-btn { 
+    background: #22c55e; 
+    color: white; 
+    border: none; 
+    padding: 10px; 
+    border-radius: 6px; 
+    font-weight: bold; 
+    cursor: pointer; 
+}
+
+/* النافذة المنبثقة لكلمة السر (Modal) */
+.modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #38bdf8;
+    width: 90%;
+    max-width: 380px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.modal-content h3 { color: #38bdf8; margin-bottom: 8px; }
+.modal-content p { font-size: 0.9rem; color: #94a3b8; margin-bottom: 15px; }
+.modal-content input { width: 100%; text-align: center; font-size: 1.2rem; letter-spacing: 2px; }
+
+.error-msg { color: #ef4444 !important; font-size: 0.85rem !important; margin-top: 8px !important; }
+
+.modal-actions { display: flex; gap: 10px; margin-top: 15px; }
+.btn-confirm { flex: 2; background: #22c55e; color: white; border: none; padding: 10px; border-radius: 6px; font-weight: bold; cursor: pointer; }
+.btn-cancel { flex: 1; background: #475569; color: white; border: none; padding: 10px; border-radius: 6px; cursor: pointer; }
