@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عيسى الأسطورة - الموقع الشخصي</title>
+    <title>عيسى الأسطورة | الموقع الشخصي</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,65 +14,23 @@
         <p class="subtitle" id="view-job">صيانة الأجهزة الكهربائية</p>
     </header>
 
-    <section class="card">
-        <h2>عنّي</h2>
-        <p id="view-about">اعشق الإلكترونيات والتكنولوجيا</p>
-    </section>
+    <main class="container">
+        <!-- قسم نبذة عني -->
+        <section class="card">
+            <h2>عنّي</h2>
+            <p id="view-about">أعشق الإلكترونيات والتكنولوجيا</p>
+        </section>
 
-    <section class="card">
-        <h2>المهارات</h2>
-        <p id="view-skills">أجيد صيانة الأجهزة الكهربائية والإلكترونيات</p>
-    </section>
+        <!-- قسم التواصل -->
+        <section class="card">
+            <h2>تواصل معي</h2>
+            <p>البريد الإلكتروني: <a href="mailto:esamostfa495@gmail.com" id="view-email">esamostfa495@gmail.com</a></p>
+        </section>
+    </main>
 
-    <section class="card">
-        <h2>تواصل معي</h2>
-        <div class="contact-links">
-            <a id="view-email" href="mailto:esamostfa495@gmail.com" class="btn">البريد الإلكتروني</a>
-        </div>
-    </section>
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; عيسى الأسطورة</p>
+    </footer>
 
-    <hr class="separator">
-
-    <!-- زر لوحة التعديل -->
-    <div class="admin-panel">
-        <button id="toggle-btn" class="edit-btn">🔒 دخول لوحة التحكم</button>
-
-        <form id="edit-form" class="hidden">
-            <h3>تعديل بيانات الموقع</h3>
-            
-            <label>الاسم:</label>
-            <input type="text" id="input-name" placeholder="أدخل اسمك" value="عيسى الأسطورة">
-
-            <label>المسمى الوظيفي:</label>
-            <input type="text" id="input-job" placeholder="مثال: مطور ويب" value="صيانة الأجهزة الكهربائية">
-
-            <label>نبذة عنك:</label>
-            <textarea id="input-about" rows="3" placeholder="اكتب نبذة قصيرة">اعشق الإلكترونيات والتكنولوجيا</textarea>
-
-            <label>المهارات:</label>
-            <input type="text" id="input-skills" placeholder="HTML, CSS, JS" value="أجيد صيانة الأجهزة الكهربائية والإلكترونيات">
-
-            <label>البريد الإلكتروني:</label>
-            <input type="email" id="input-email" placeholder="email@example.com" value="esamostfa495@gmail.com">
-
-            <button type="submit" class="save-btn">حفظ التغييرات</button>
-        </form>
-    </div>
-
-    <!-- نافذة إدخال كلمة السر الاحترافية (Modal) -->
-    <div id="password-modal" class="modal hidden">
-        <div class="modal-content">
-            <h3>تسجيل الدخول للإدارة</h3>
-            <p>أدخل كلمة السر للوصول للوحة التعديل:</p>
-            <input type="password" id="modal-password-input" placeholder="••••••••">
-            <p id="error-msg" class="error-msg hidden">كلمة السر غير صحيحة!</p>
-            <div class="modal-actions">
-                <button id="confirm-pass-btn" class="btn-confirm">دخول</button>
-                <button id="close-modal-btn" class="btn-cancel">إلغاء</button>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
